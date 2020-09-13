@@ -1,5 +1,5 @@
 {
-  "name": "gh-openapi-docs",
+  "name": "gh-openapi-docs-test",
   "description": "Build ReDoc API documentation for an OpenAPI specification and host on GitHub Pages",
   "author": "James Eddy <james.a.eddy@gmail.com>",
   "version": "0.2.1",
