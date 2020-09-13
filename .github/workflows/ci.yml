@@ -6,8 +6,9 @@ on:
       - master
       - develop
       - test-feature-53-add-gh-workflow
-    release:
-      types: [created]
+  release:
+    types:
+      - created
   pull_request:
 
 env:
