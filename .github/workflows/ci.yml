@@ -36,8 +36,8 @@ jobs:
         node-version: ${{ env.node_version }}
     - run: npm install
     - run: npm run test
-    - run: npm run coverage
-    - run: npm run pushCoverageReport
+    # - run: npm run coverage
+    # - run: npm run pushCoverageReport
 
   publish:
     if: github.event_name == 'release' && github.event.action == 'created'
