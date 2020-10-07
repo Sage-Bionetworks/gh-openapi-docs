@@ -18,7 +18,7 @@
     "pushCoverageReport": "npx nyc report --reporter=text-lcov | npx coveralls",
     "lint:all": "echo 1"
   },
-  "bin": "./src/lib/bundle.js",
+  "bin": "./dist/bundle.js",
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "@redocly/openapi-cli": "0.8.4",
