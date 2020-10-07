@@ -2,7 +2,7 @@
   "name": "gh-openapi-docs-ts",
   "description": "Build ReDoc API documentation for an OpenAPI specification and host on GitHub Pages",
   "author": "James Eddy <james.a.eddy@gmail.com>",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "Apache-2.0",
   "repository": "github:tschaffter/gh-openapi-docs",
   "main": "./src/lib/index.js",
