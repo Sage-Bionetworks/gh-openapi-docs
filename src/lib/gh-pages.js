@@ -13,10 +13,12 @@ const fetchPages = () => {
     var startDir = shell.pwd();
     shell.cd('.ghpages-tmp');
     log.log(`\nCloning 'gh-pages' branch into '${shell.pwd().stdout}'`);
+    log.log(`git clone --depth=1 --branch=gh-pages ${config.repoOrigin} .`)
     shell.exec(
         `git clone --depth=1 --branch=gh-pages ${config.repoOrigin} .`,
-        {silent: true}
+        {silent: false}
     );
+    log.log(`\nplop`)
     shell.cp('-Rn', config.branchPathBase, config.root);
     if (fs.existsSync(config.docsRoot)) {
         shell.cp('-Rn', config.docsRoot, config.root);

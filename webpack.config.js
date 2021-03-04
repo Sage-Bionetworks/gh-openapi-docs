@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     target: "node",
+    node: false,
     entry: {
         'gh-openapi-docs': './src/gh-openapi-docs.js'
     },
@@ -39,7 +41,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.BannerPlugin({ banner: "#!/usr/bin/env node", raw: true })
+        new webpack.BannerPlugin({ banner: "#!/usr/bin/env node", raw: true }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './node_modules/shelljs/src/exec-child.js', to: '' }
+            ],
+        })
     ],
     stats: {
         // Ignore warnings due to yarg's dynamic module loading
